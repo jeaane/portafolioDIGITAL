@@ -1,108 +1,106 @@
+/* Paleta cálida */
+:root {
+  --fondo-claro: #d8c3a5;
+  --fondo-seccion: #fefae0;
+  --texto: #6b4c3b;
+  --acento: #a26769;
+  --oscuro: #582f0e;
+  --borde: #8d6e63;
+}
+
+/* Modo noche */
+body.noche {
+  --fondo-claro: #3e2723;
+  --fondo-seccion: #4e342e;
+  --texto: #f5f5f5;
+  --acento: #8d6e63;
+  --oscuro: #212121;
+  --borde: #795548;
+}
+
 body {
+  background-color: var(--fondo-claro);
+  color: var(--texto);
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
-  color: #333;
-  margin: 0;
-  padding: 0;
-  transition: background 1s ease;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-header {
-  background-color: #6a1b9a;
+header, footer {
+  background-color: var(--acento);
   color: white;
-  padding: 2rem;
-  text-align: center;
-  animation: fadeIn 2s ease;
+  transition: background-color 0.6s ease;
 }
 
-.manifiesto {
-  font-style: italic;
-  margin-top: 1rem;
-  font-size: 1.2rem;
+nav {
+  background-color: var(--oscuro);
+  transition: background-color 0.6s ease;
 }
 
 section {
+  background-color: var(--fondo-seccion);
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  animation: fadeInUp 1s ease;
-}
-
-#afirmaciones, #participa {
-  background-color: #fff8e1;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
   margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.6s ease;
 }
 
-button {
-  background-color: #6a1b9a;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.3s ease;
+/* Botones */
+button, .btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button:hover {
-  background-color: #4a148c;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.evento {
-  background-color: #e1bee7;
-  padding: 1rem;
-  border-left: 4px solid #6a1b9a;
-  border-radius: 4px;
+/* Tarjetas */
+.card {
   transition: transform 0.3s ease;
 }
-
-.evento:hover {
+.card:hover {
   transform: scale(1.02);
 }
 
-input {
-  padding: 0.5rem;
-  border: 2px solid #6a1b9a;
-  border-radius: 4px;
-  width: 80%;
-  margin-top: 1rem;
+/* Animaciones suaves */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
 }
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-ul li {
-  background-color: #f3e5f5;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  border-radius: 4px;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #4a148c;
-  color: white;
-}
-
 @keyframes fadeIn {
-  from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Transiciones entre secciones */
+section {
+  scroll-margin-top: 80px;
 }
+
+/* Modo noche toggle */
+#modoNocheBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--acento);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+#binnyAnimation {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* o left: 20px para el otro lado */
+  width: 300px;
+  height: 300px;
+  z-index: 10;
+}
+
+#dogAnimation {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* o left: 20px para el otro lado */
+  width: 300px;
+  height: 300px;
+  z-index: 10;
+}
+

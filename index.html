@@ -1,52 +1,167 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jean | Portafolio Creativo</title>
+  <title> | Portafolio Cálido</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Jean: Tecnología que emociona</h1>
-    <p class="manifiesto">“Estoy construyendo tecnología que educa, emociona y transforma.”</p>
+<body style="background-color: #d8c3a5; color: #6b4c3b; font-family: 'Segoe UI', sans-serif;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #582f0e;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-white" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active text-white" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#linea-tiempo">Evolución</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#participa">Afirmaciones</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="text-center p-4" style="background-color: #a26769;">
+    <h1 class="h4 text-white"> Tecnología que emociona</h1>
+    <p class="fst-italic text-white">“ construyendo tecnología que educa, emociona y transforma.”</p>
   </header>
 
-  <section id="afirmaciones">
-    <h2>🌟 Afirmación del día</h2>
-    <p id="frase"></p>
-    <button onclick="nuevaFrase()">✨ Generar otra</button>
+  <!-- Afirmación del día -->
+  <section id="afirmaciones" class="container text-center my-4">
+    <h2 class="h6">🌟 Afirmación del día</h2>
+    <p id="frase" class="text-muted small"></p>
+    <button class="btn btn-sm mt-2" style="background-color: #a26769; color: white;" onclick="nuevaFrase()">✨ Generar otra</button>
   </section>
 
-  <section id="linea-tiempo">
-    <h2>📜 Mi evolución creativa</h2>
+  <!-- Línea de tiempo -->
+  <section id="linea-tiempo" class="container my-4">
+    <h2 class="h6 text-center">📜  Evolución creativa</h2>
     <div class="timeline">
-      <div class="evento">
-        <h3>2022</h3>
-        <p>Descubrí el poder de documentar con emoción.</p>
+      <div class="evento p-2 border-start border-3 border-dark bg-white mb-2 small shadow-sm rounded">
+        <strong>2022:</strong> el poder de documentar con emoción.
       </div>
-      <div class="evento">
-        <h3>2023</h3>
-        <p>Aprendí que la tecnología puede ser un puente afectivo.</p>
+      <div class="evento p-2 border-start border-3 border-dark bg-white mb-2 small shadow-sm rounded">
+        <strong>2023:</strong> la tecnología puede ser un puente afectivo.
       </div>
-      <div class="evento">
-        <h3>2024</h3>
-        <p>Fusioné sensores, narrativa y educación ambiental.</p>
+      <div class="evento p-2 border-start border-3 border-dark bg-white mb-2 small shadow-sm rounded">
+        <strong>2024:</strong> sensores, narrativa y educación ambiental.
       </div>
     </div>
   </section>
 
-  <section id="participa">
-    <h2>💌 Tu afirmación</h2>
-    <input type="text" id="inputAfirmacion" placeholder="Escribe tu afirmación..." />
-    <button onclick="guardarAfirmacion()">📩 Enviar</button>
-    <ul id="listaAfirmaciones"></ul>
+  <!-- Tarjetas de proyectos -->
+  <section class="container my-4">
+    <h2 class="h6 text-center mb-3">🎨 Proyectos destacados</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm" style="background-color: #fefae0;">
+          <img src="images/images2.jpeg" class="card-img-top" alt="Imagen">
+          <div class="card-body p-2 small">
+            <h6 class="card-title text-dark">Proyecto 1</h6>
+            <p class="card-text">Descripción breve del proyecto o contenido.</p>
+            <a href="#" class="btn btn-sm btn-outline-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm" style="background-color: #fefae0;">
+          <img src="images/images2.jpeg" class="card-img-top" alt="Imagen">
+          <div class="card-body p-2 small">
+            <h6 class="card-title text-dark">Proyecto 2</h6>
+            <p class="card-text">Otra descripción interesante para mostrar.</p>
+            <a href="#" class="btn btn-sm btn-outline-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm" style="background-color: #fefae0;">
+          <img src="images/images3.jpeg" class="card-img-top" alt="Imagen">
+          <div class="card-body p-2 small">
+            <h6 class="card-title text-dark">Proyecto 3</h6>
+            <p class="card-text">Un tercer ejemplo para completar la fila.</p>
+            <a href="#" class="btn btn-sm btn-outline-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>Creado con 💡 por Jean</p>
+  <!-- Participación del visitante -->
+  <section id="participa" class="container text-center my-4">
+    <h2 class="h6">💌 Tu afirmación</h2>
+    <input type="text" id="inputAfirmacion" class="form-control form-control-sm w-75 mx-auto" placeholder="Escribe tu afirmación..." />
+    <button class="btn btn-sm mt-2" style="background-color: #a26769; color: white;" onclick="guardarAfirmacion()">📩 Enviar</button>
+    <ul id="listaAfirmaciones" class="list-group list-group-flush mt-3 w-75 mx-auto small"></ul>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contacto" class="container my-4">
+    <h2 class="h6 text-center">📬 Contáctanos</h2>
+    <form class="small">
+      <div class="mb-2">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control form-control-sm" id="nombre" placeholder="Tu nombre">
+      </div>
+      <div class="mb-2">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control form-control-sm" id="correo" placeholder="nombre@ejemplo.com">
+      </div>
+      <div class="mb-2">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control form-control-sm" id="mensaje" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-sm btn-outline-dark">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-2 small" style="background-color: #582f0e;">
+    <p class="text-white">Creado con IA por AIRIN</p>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+
+  
+
+
+  <div id="dogAnimation"></div>
+
+<script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('dogAnimation'), // el div donde se mostrará
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'animations/dog.json' // ruta al archivo JSON de la animación
+  });
+</script>
+
+
+
+  <div id="binnyAnimation"></div>
+
+<script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('binnyAnimation'), // el div donde se mostrará
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'animations/binny.json' // ruta al archivo JSON de la animación
+  });
+</script>
+
+
 </body>
 </html>
