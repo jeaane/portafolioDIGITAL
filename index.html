@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jean | Portafolio Creativo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Jean: Tecnología que emociona</h1>
+    <p class="manifiesto">“Estoy construyendo tecnología que educa, emociona y transforma.”</p>
+  </header>
+
+  <section id="afirmaciones">
+    <h2>🌟 Afirmación del día</h2>
+    <p id="frase"></p>
+    <button onclick="nuevaFrase()">✨ Generar otra</button>
+  </section>
+
+  <section id="linea-tiempo">
+    <h2>📜 Mi evolución creativa</h2>
+    <div class="timeline">
+      <div class="evento">
+        <h3>2022</h3>
+        <p>Descubrí el poder de documentar con emoción.</p>
+      </div>
+      <div class="evento">
+        <h3>2023</h3>
+        <p>Aprendí que la tecnología puede ser un puente afectivo.</p>
+      </div>
+      <div class="evento">
+        <h3>2024</h3>
+        <p>Fusioné sensores, narrativa y educación ambiental.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="participa">
+    <h2>💌 Tu afirmación</h2>
+    <input type="text" id="inputAfirmacion" placeholder="Escribe tu afirmación..." />
+    <button onclick="guardarAfirmacion()">📩 Enviar</button>
+    <ul id="listaAfirmaciones"></ul>
+  </section>
+
+  <footer>
+    <p>Creado con 💡 por Jean</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
